@@ -45,111 +45,165 @@
 
 <!-- FORM 1 CREATE TO-->
 
-<h3>Create a new TO :</h3>
-<form action="Admin.php" method="post">
-    <div class="labels">
-        <label>* Name</label>
-        <input type="text" name="name" placeholder="TripAwsome.." required>
-    </div>
-    <div class="labels">
-        <label>* Grade</label>
-        <input type="number" name="grade" min="0" max="5">
-    </div>
-    <div class="labels">
-        <label>* link</label>
-        <input type="text" name="link" placeholder="https://..." required>
-    </div>
-    <div class="labels">
-        <label>* Premium</label>
-        <input type="number" name="premium" min="0" max="1">
-    </div>
+<div class="container forget-password">
+    <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-12 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <img src="/IMG/to.png" alt="car-key" border="0">
+                        <h2 class="text-center">Create a new TO :</h2>
 
-    <input type="submit" id='submit' value='Submit'>
+                        <form id="register-form" role="form" autocomplete="off" class="form" method="post" action="Admin.php">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" name="name" placeholder="TO Name" class="form-control"  type="text" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" placeholder="Grade" class="form-control"  type="number" name="grade" min="0" max="5" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="text" name="link" placeholder="Link" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="number" name="premium" min="0" max="1" placeholder="Premium" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget"type="submit">
+                            </div>
 
-</form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FORM 2 CREATE DESTI -->
 
-<h3>Create a new destination :</h3>
-<form action="Admin.php" method="post">
-    <div class="labels">
-        <label>* Location</label>
-        <input type="text" name="location" placeholder="Venise.." required>
-    </div>
-    <select name="to">
-            <option value="">choose a TO</option>
+<div class="container forget-password">
+    <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-12 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <img src="/IMG/laptop.png" alt="car-key" border="0">
+                        <h2 class="text-center">Create a new destination :</h2>
 
-            <?php foreach ($allTourOp as $rowTourop){ ?>
-                <option value="<?=$rowTourop->getId()?>"><?=$rowTourop->getName()?></option>
-            <?php } ?>
-        </select>
-    <div class="labels">
-        <label>* Description</label>
-        <input type="text" name="description" placeholder="Lorem Ipsum.." required>
-    </div>
-    <div class="labels">
-        <label>* Price</label>
-        <input type="text" name="price" placeholder="700$" required>
-    </div>
-    <div class="labels">
-        <label>* Image</label>
-        <input type="text" name="image" placeholder="/IMG/.." required>
-    </div>
+                        <form id="register-form" role="form" autocomplete="off" class="form" action="Admin.php" method="post">
+                            <div class="form-group">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                        <input id="forgetAnswer" class="form-control" type="text" name="location" placeholder="Location" required>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select class="form-control" id="sel1" name="to">
+                                        <option selected="true" disabled="disabled">Choose a TO</option>
+                                        <?php foreach ($allTourOp as $rowTourop){ ?>
+                                            <option value="<?=$rowTourop->getId()?>"><?=$rowTourop->getName()?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="text" name="description" placeholder="Description" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="text" name="price" placeholder="Price $" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="text" name="image" placeholder="/IMG/" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" type="submit">
+                            </div>
 
-    <input type="submit" id='submit' value='Submit'>
-
-</form>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FORM 3 CREATE ALL -->
-<h3>Create a new Trip :</h3>
 
-<form action="Admin.php" method="post" class="select">
-                    
-    <div class="labels">
-        <label>* Location :</label>
+    <div class="container forget-password">
+    <div class="row">
+        <div class="col-lg-12 col-md-6 col-sm-12 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <img src="/IMG/trip.png" alt="car-key" border="0">
+                        <h2 class="text-center">Create a new Trip :</h2>
+
+                        <form id="register-form" role="form" action="Admin.php" method="post" class="form">
+                            <div class="form-group">
+                                    <div class="input-group">
+                                        <select class="form-control" id="sel1" name="location">
+                                            <option selected="true" disabled="disabled">Choose a location</option>
+                                            <?php foreach ($allDestinations as $rowDestination) { ?>
+
+                                                <option value="<?=$rowDestination->getLocation()?>"><?=$rowDestination->getLocation()?></option>
+
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select class="form-control" id="sel1" name="to">
+                                        <option selected="true" disabled="disabled">Choose a TO</option>
+                                        <?php foreach ($allTourOp as $rowTourop){ ?>
+                                            <option value="<?=$rowTourop->getId()?>"><?=$rowTourop->getName()?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                    <input id="forgetAnswer" class="form-control" type="text" name="price" placeholder="Price $" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" type="submit">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="rightTab">
-        <select name="location">
-            <option value="">Please choose a location</option>
-
-            <?php foreach ($allDestinations as $rowDestination) { ?>
-
-                <option value="<?=$rowDestination->getLocation()?>"><?=$rowDestination->getLocation()?></option>
-
-            <?php } ?>
-            
-        </select>
-    </div>     
-
-    <div class="labels">
-        <label >* TO :</label>
-    </div>
-    <div class="rightTab">
-        <select name="to">
-            <option value="">Please choose a TO</option>
-
-            <?php foreach ($allTourOp as $rowTourOp) { ?>
-
-                <option value="<?=intval($rowTourOp->getId())?>"><?=$rowTourOp->getName()?></option>
-
-            <?php } ?>
-        </select>
-    </div>
+</div>
 
     
 
-    <div class="labels">
-        <label for="price">* Price :</label>
-    </div>
-    <div class="rightTab">
-        <input type="text" name="price" required placeholder="600$">
-    </div>
-
-    
-
-        <input type="submit" id='submit' value='Submit'>
-
-</form>
+  
 
 
 

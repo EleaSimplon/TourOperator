@@ -3,6 +3,7 @@
 class Review {
     
     protected $id;
+    protected int $note;
     protected string $message;
     protected string $author;
     // protected int $id_tour_operator;
@@ -41,6 +42,14 @@ class Review {
 
     public function setMessage  ($message){
         $this->message = $message;
+    }
+
+    public function getNote (){
+        return $this->note;
+    }
+
+    public function setNote  ($note){
+        $this->note = $note;
     }
 
     public function getAuthor (){

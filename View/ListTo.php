@@ -32,7 +32,8 @@
                     <div class="card-body">
                         <h5 class="card-title"><?=$to->getName()?></h5>
                         <p class="card-text"><?=$destination->getDescription()?></p>
-                        <p class="card-text"><small class="text-muted"><?=$destination->getPrice().' $'?></small></p>
+                        <h4 class="card-text"><?=$destination->getPrice().' $'?></h4>
+                        <p class="card-text"><?=$to->getGrade().'⭐'?></p>
                     </div>
                     </div>
                 </div>
@@ -50,8 +51,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                       <!-- AJAX POUR LES COMS DANS JS ET GETREVIEW -->
-
+                        <!-- AJAX POUR LES COMS DANS JS ET GETREVIEW -->
                     </div>
                     <div class="modal-footer">
                         <h5>Write your comment...</h5>
@@ -64,9 +64,12 @@
                             <label>* Comment</label>
                             <input id="input-message" type="textarea" name="comment" placeholder="Your comment" required>
                         </div>
-                        <button class="btn btn-dark btn-form-review" id='submit' type="button" class="">Dark</button>
+                        <div class="labels">
+                            <label>* Grade</label>
+                            <input id="input-grade" type="number" name="grade" min="0" max="5" required>
+                        </div>
+                        <button class="btn btn-dark btn-form-review" id='submit' type="button" >Dark</button>
                         </form>
-                        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
                     </div>
                     </div>
                 </div>
