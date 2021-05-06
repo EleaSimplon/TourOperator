@@ -1,0 +1,35 @@
+/* ADMIN */
+
+/* FORMS */
+
+
+.forms-admin .panel-body{
+    max-width: 25rem;
+    max-height: 40rem;
+    padding: 15%;
+    margin-bottom: -50%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  img{
+    width:40%;
+    margin-bottom:10%;
+  }
+  .btnForget{
+    background: #9eb1dd;
+    border:none;
+  }
+  .forms-admin .dropdown{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+  }
+  .forms-admin .dropdown button{
+    width: 100%;
+  }
+  .forms-admin .dropdown ul{
+    width: 100%;
+  }
+  

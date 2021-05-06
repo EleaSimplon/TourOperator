@@ -54,7 +54,8 @@
                         <!-- AJAX POUR LES COMS DANS JS ET GETREVIEW -->
                     </div>
                     <div class="modal-footer">
-                        <h5>Write your comment...</h5>
+                    <img src="/IMG/note.png" style="width:9rem">
+                        <!-- <h5>Write your comment...</h5> -->
                         <form action="" method="">
                         <div class="labels">
                             <label>* Name</label>
@@ -65,10 +66,10 @@
                             <input id="input-message" type="textarea" name="comment" placeholder="Your comment" required>
                         </div>
                         <div class="labels">
-                            <label>* Grade</label>
-                            <input id="input-grade" type="number" name="grade" min="0" max="5" required>
+                            <label>* Note</label>
+                            <input id="input-note" type="number" name="note" min="0" max="5" required>
                         </div>
-                        <button class="btn btn-dark btn-form-review" id='submit' type="button" >Dark</button>
+                        <button class="btn btn-dark btn-form-review" id='submit' type="button">Submit</button>
                         </form>
                     </div>
                     </div>

@@ -54,9 +54,10 @@ class TourOperatorManager {
 
   public function addGrade(TourOperator $tourOperator)
   {
-    $q = $this->db->prepare('INSERT INTO tour_operators (grade) VALUES(:grade)');
+    $q = $this->db->prepare('UPDATE tour_operators SET grade = :garde WHERE id = :id');
     
     $q->bindValue(':grade', $this->getMoyenne($tourOperator));
+    $q->bindValue(':id', ($tourOperator->getId()));
     $q->execute();
     
   }

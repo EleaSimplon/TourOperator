@@ -11,8 +11,7 @@ class DestinationManager {
 
   public function add(Destination $destination, TourOperator $tour_operator)
   {
-    
-    var_dump($destination);
+ 
     $q = $this->db->prepare('INSERT INTO destinations(location, price, id_tour_operator, img, description) VALUES(:location, :price, :id_tour_operator, :img, :description)');
     
     $q->bindValue(':location', $destination->getLocation());

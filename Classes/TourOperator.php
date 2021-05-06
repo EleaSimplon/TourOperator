@@ -6,7 +6,7 @@ class TourOperator {
     protected string $name;
     protected string $link;
     protected int $grade;
-    protected bool $is_premium;
+    protected int $is_premium;
 
     /* CONSTRUCT */
 

@@ -27,6 +27,7 @@ submitMsg.addEventListener('click',function (e){
     
     let inputMessage = document.querySelector('#input-message')
     let inputAuthor = document.querySelector('#input-author')
+    let inputNote = document.querySelector('#input-note')
 
     let idTO = document.querySelector('.box-review').getAttribute('id')
 
@@ -34,6 +35,7 @@ submitMsg.addEventListener('click',function (e){
     formData.append('idTO', idTO)
     formData.append('message', inputMessage.value)
     formData.append('author', inputAuthor.value)
+    formData.append('note', inputAuthor.value)
 
 
 
