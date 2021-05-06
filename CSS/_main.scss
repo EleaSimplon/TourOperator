@@ -1,14 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
+@import 'mixin';
 @import 'navbar';
 @import 'card-index';
 @import 'cards-admin';
+@import 'parallax';
+
+html {
+  cursor : url(/IMG/laptop.png);
+}
 
 body {
   background-color: #d7e3fc;
-  font-family: 'Abril Fatface', cursive;
   text-align: center;
 }
+
+h1, h2, h3, h4, a {
+  font-family: 'Roboto Slab', serif;
+}
+
+
 
 /* INDEX */
 

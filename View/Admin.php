@@ -16,7 +16,7 @@
 
     if (isset($_POST['link'])){
 
-        $newTourOp = new TourOperator(['name'=>$_POST['name'], 'grade'=>$_POST['grade'], 'link'=>$_POST['link'], 'is_premium'=>$_POST['premium']]);
+        $newTourOp = new TourOperator(['name'=>$_POST['name'], 'link'=>$_POST['link'], 'is_premium'=>$_POST['premium']]);
         $tourOp->add($newTourOp);
     }
 
@@ -51,7 +51,7 @@
                 <div class="panel-body">
                     <div class="text-center">
                         <img src="/IMG/to.png" border="0">
-                        <h2 class="text-center">Create a new TO :</h2>
+                        <h2 class="text-center">New TO</h2>
 
                         <form id="register-form" role="form" autocomplete="off" class="form" method="post" action="Admin.php">
                             <div class="form-group">
@@ -60,12 +60,12 @@
                                     <input id="forgetAnswer" name="name" placeholder="TO Name" class="form-control"  type="text" required>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
                                     <input id="forgetAnswer" placeholder="Grade" class="form-control"  type="number" name="grade" min="0" max="5" required>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
@@ -94,7 +94,7 @@
                 <div class="panel-body">
                     <div class="text-center">
                         <img src="/IMG/laptop.png" border="0">
-                        <h2 class="text-center">Create a new destination :</h2>
+                        <h2 class="text-center">New destination</h2>
 
                         <form id="register-form2" role="form" autocomplete="off" class="form" action="Admin.php" method="post">
                             <div class="form-group">
@@ -147,7 +147,7 @@
                 <div class="panel-body">
                     <div class="text-center">
                         <img src="/IMG/trip.png" border="0">
-                        <h2 class="text-center">Create a new Trip :</h2>
+                        <h2 class="text-center">New Trip</h2>
 
                         <form id="register-form3" role="form" action="Admin.php" method="post" class="form">
                             <div class="form-group">

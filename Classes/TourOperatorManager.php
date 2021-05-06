@@ -12,11 +12,10 @@ class TourOperatorManager {
   public function add(TourOperator $tourOperator)
   {
     
-    $q = $this->db->prepare('INSERT INTO tour_operators (name, link, grade, is_premium) VALUES(:name, :link, :grade, :is_premium)');
+    $q = $this->db->prepare('INSERT INTO tour_operators (name, link, is_premium) VALUES(:name, :link, :is_premium)');
     
     $q->bindValue(':name', $tourOperator->getName());
     $q->bindValue(':link', $tourOperator->getLink());
-    $q->bindValue(':grade', $tourOperator->getGrade());
     $q->bindValue(':is_premium', $tourOperator->isIsPremium());
     
     $q->execute();
@@ -42,31 +41,25 @@ class TourOperatorManager {
       return $tourop;
   }
 
-  
 
-  public function getMoyenne(TourOperator $tour_operator)
-  {
-
+  public function getMoyenne (TourOperator $tour_operator){
     $q = $this->db->prepare('SELECT AVG (note) FROM reviews WHERE id_tour_operator =?');
     $q->execute([intval($tour_operator->getId())]);
-
     $moyenne = $q->fetch(PDO::FETCH_BOTH);
-    return $moyenne[0];
-    
-  }
 
-  public function addGrade(TourOperator $tourOperator)
-  {
-    $q = $this->db->prepare('UPDATE tour_operators SET grade = :garde WHERE id = :id');
-    
-    $q->bindValue(':grade', $this->getMoyenne($tourOperator));
-    $q->bindValue(':id', ($tourOperator->getId()));
+    return $moyenne[0];
+}
+
+public function addGrade(TourOperator $tour_operator){
+    $q = $this->db->prepare('UPDATE tour_operators SET grade = :grade WHERE id = :id');
+
+    $q->bindValue(':grade', $this->getMoyenne($tour_operator));
+    $q->bindValue(':id', ($tour_operator->getId()));
     $q->execute();
 
-    $tourOperator->hydrate([
-      'grade' => $this->getMoyenne($tourOperator)
+    $tour_operator->hydrate([
+        'grade'=>$this->getMoyenne($tour_operator)
     ]);
-    
-  }
+}
 
 }

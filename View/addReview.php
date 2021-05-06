@@ -6,10 +6,14 @@
 
     $reviewManager = new ReviewManager($pdo);
 
+    $tourOpManag = new TourOperatorManager($pdo);
+
     $tourOp = new TourOperator(['id'=>intval($_POST['idTO'])]);
 
     $newReview = new Review(['message'=>$_POST['message'], 'author'=>$_POST['author'], 'note'=>$_POST['note']]);
     $reviewManager->add($newReview, $tourOp);
+
+    $tourOpManag->addGrade($tourOp);
 
     $reviews = $reviewManager->getList($tourOp);
 
