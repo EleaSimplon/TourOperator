@@ -73,110 +73,14 @@ include 'View/Header.php';
     </header>
 
 <!-- ***************************** POC BANNER CARDS *********************************** -->
+			
+	<h1>Check out our sales !</h1>										
 
-<section>
-	<!-- heading -->
-	<div class="container">
-		<div class="row">			
-			<div class="mx-auto">
-				<div class="col-lg-12">				
-					<h1>Check out our sales !</h1>										
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- cards -->
-	<div class="container">
-		<div class="row">			
-			<div class="mx-auto">
-				<div class="col-lg-12">
-					<div class="text-center my-3">						
-						<div class="card-deck no-gutters">
-
-							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="card h-100 mb-4">                    
-									<div class="card-header">                                
-										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Connected Devices and Sensors</h5>
-									</div>
-									<div class="card-body text-left">
-										<p class="card-text">Arduino, Raspbery, Watson or Adafruit </p>
-										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
-										<div class="promotion-promo">$ 11.5</div>
-										<div class="promotion-price">
-											<div class="promotion-price-desc">Now</div>
-											<div class="promotion-price-text">$ 9.5</div>                                    
-										</div>
-									</div>
-									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
-								</div>
-							</div>
-
-							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="card h-100 mb-4">                    
-									<div class="card-header">                                
-										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">IOT Big Data Analytics</h5>
-									</div>
-									<div class="card-body text-left">
-										<p class="card-text">Big Data and Analytics Dashboard for sensor projects.</p>
-										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
-										<div class="promotion-promo">$ 22.23</div>
-										<div class="promotion-price">
-											<div class="promotion-price-desc">Now</div>
-											<div class="promotion-price-text">$ 20.23</div>                                    
-										</div>
-									</div>
-									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
-								</div>
-							</div>
-
-							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="card h-100 mb-4">                    
-									<div class="card-header">                                
-										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Device Data Counter Status</h5>
-									</div>
-									<div class="card-body text-left">
-										<p class="card-text">Up to 500 registered devices, data analyzed per month.</p>
-										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
-										<div class="promotion-promo">$ 12.2</div>
-										<div class="promotion-price">
-											<div class="promotion-price-desc">Now</div>
-											<div class="promotion-price-text">$ 10.2</div>                                    
-										</div>
-									</div>
-									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
-								</div>
-							</div>
-
-							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
-								<div class="card h-100 mb-4">                    
-									<div class="card-header">                                
-										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Enterprise Edition Package</h5>
-									</div>
-									<div class="card-body text-left">
-										<p class="card-text">All features with cloud storage and Full support.</p>
-										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
-										<div class="promotion-promo">$ 10</div>
-										<div class="promotion-price">
-											<div class="promotion-price-desc">Now</div>
-											<div class="promotion-price-text">$ 8</div>                                    
-										</div>
-									</div>
-									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
     
 <!-- ***************************** TEXT INDEX *********************************** -->
     
     <main>
-        <div class="about">
+        <div id="about" class="about">
             <img src="/IMG/gif.gif">
             <h1>Welcome to ComparOperator</h1>
             <a class="no-iframe" href="https://codepen.io/jakob-e/debug/ELqeRM/" target="_blank">Open in debug mode</a>        
@@ -192,7 +96,7 @@ include 'View/Header.php';
 
     <h1>Book now !</h1>
 
-    <ul>
+    <ul id="book">
 
         <?php
 
@@ -242,8 +146,8 @@ include 'View/Header.php';
 </div>    
 
 
-
-
+<!-- ***************************** BACK TO TOP BTN *********************************** -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
 
 

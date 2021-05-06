@@ -20,7 +20,9 @@ h1, h2, h3, h4, a {
   font-family: 'Roboto Slab', serif;
 }
 
-
+h1 {
+  padding: 1rem;
+}
 
 /* INDEX */
 
@@ -50,4 +52,13 @@ h1, h2, h3, h4, a {
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+/* BACK TO TOP BTN */
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
 }
