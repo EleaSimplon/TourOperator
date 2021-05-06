@@ -8,9 +8,8 @@ include 'View/Header.php';
 
 ?>
 
-<!-- 
-    Resource SVG for Parallax 
--->
+<!-- ***************************** PARALLAX START HERE *********************************** -->
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" style="position:absolute;top:0;left:0;width:0;height:0;overflow:hidden;" focusable="false" aria-hidden="true">
     <!-- show content using white mask fill -->
     <style>mask { fill: white; }</style>
@@ -58,6 +57,7 @@ include 'View/Header.php';
 </svg>
 
 <div class="page">
+    
       <header>      
         <div class="parallax">      
             <div class="bg"><svg viewBox="0 0 480 240"><use xlink:href="#bg" /></svg></div>            
@@ -71,17 +71,124 @@ include 'View/Header.php';
             <div class="p1"><svg viewBox="0 0 480 240"><use xlink:href="#p1" /></svg></div>                                   
         </div>   
     </header>
+
+<!-- ***************************** POC BANNER CARDS *********************************** -->
+
+<section>
+	<!-- heading -->
+	<div class="container">
+		<div class="row">			
+			<div class="mx-auto">
+				<div class="col-lg-12">				
+					<h1>Check out our sales !</h1>										
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- cards -->
+	<div class="container">
+		<div class="row">			
+			<div class="mx-auto">
+				<div class="col-lg-12">
+					<div class="text-center my-3">						
+						<div class="card-deck no-gutters">
+
+							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+								<div class="card h-100 mb-4">                    
+									<div class="card-header">                                
+										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Connected Devices and Sensors</h5>
+									</div>
+									<div class="card-body text-left">
+										<p class="card-text">Arduino, Raspbery, Watson or Adafruit </p>
+										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
+										<div class="promotion-promo">$ 11.5</div>
+										<div class="promotion-price">
+											<div class="promotion-price-desc">Now</div>
+											<div class="promotion-price-text">$ 9.5</div>                                    
+										</div>
+									</div>
+									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
+								</div>
+							</div>
+
+							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+								<div class="card h-100 mb-4">                    
+									<div class="card-header">                                
+										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">IOT Big Data Analytics</h5>
+									</div>
+									<div class="card-body text-left">
+										<p class="card-text">Big Data and Analytics Dashboard for sensor projects.</p>
+										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
+										<div class="promotion-promo">$ 22.23</div>
+										<div class="promotion-price">
+											<div class="promotion-price-desc">Now</div>
+											<div class="promotion-price-text">$ 20.23</div>                                    
+										</div>
+									</div>
+									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
+								</div>
+							</div>
+
+							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+								<div class="card h-100 mb-4">                    
+									<div class="card-header">                                
+										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Device Data Counter Status</h5>
+									</div>
+									<div class="card-body text-left">
+										<p class="card-text">Up to 500 registered devices, data analyzed per month.</p>
+										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
+										<div class="promotion-promo">$ 12.2</div>
+										<div class="promotion-price">
+											<div class="promotion-price-desc">Now</div>
+											<div class="promotion-price-text">$ 10.2</div>                                    
+										</div>
+									</div>
+									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
+								</div>
+							</div>
+
+							<div class="col-12 col-sm-6 col-md-6 col-lg-3">
+								<div class="card h-100 mb-4">                    
+									<div class="card-header">                                
+										<h5 class="card-title m-0 p-0 font-weight-bolder text-secondary">Enterprise Edition Package</h5>
+									</div>
+									<div class="card-body text-left">
+										<p class="card-text">All features with cloud storage and Full support.</p>
+										<span class="font-lead-base font-weight-bold text-muted">20% Off!</span>
+										<div class="promotion-promo">$ 10</div>
+										<div class="promotion-price">
+											<div class="promotion-price-desc">Now</div>
+											<div class="promotion-price-text">$ 8</div>                                    
+										</div>
+									</div>
+									<div class="card-footer"><a href="#" class="btn btn-warning">Order</a></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
     
+<!-- ***************************** TEXT INDEX *********************************** -->
     
     <main>
-        <h1>Welcome to ComparOperator</h1>
-        <a class="no-iframe" href="https://codepen.io/jakob-e/debug/ELqeRM/" target="_blank">Open in debug mode</a>        
-        <p>When it comes to arranging your holiday, you can click on our website, pop into one of our stores, use the ComparOperator app or call our contact centre.</p>
-        <p>While you’re away, our 24/7 ComparOperator Experience Centre means our global team of Travel Experts are on hand to help whenever you need us, while the TUI app lets you control your holiday from the palm of your hand.</p>
-        <p>We’re committed to protecting the planet, too, by actively looking out for the environment, local people and wildlife in the places you love to visit.</p>  
+        <div class="about">
+            <img src="/IMG/gif.gif">
+            <h1>Welcome to ComparOperator</h1>
+            <a class="no-iframe" href="https://codepen.io/jakob-e/debug/ELqeRM/" target="_blank">Open in debug mode</a>        
+            <p>When it comes to arranging your holiday, you can click on our website, pop into one of our stores, use the ComparOperator app or call our contact centre.</p>
+            <p>While you’re away, our 24/7 ComparOperator Experience Centre means our global team of Travel Experts are on hand to help whenever you need us, while the TUI app lets you control your holiday from the palm of your hand.</p>
+            <p>We’re committed to protecting the planet, too, by actively looking out for the environment, local people and wildlife in the places you love to visit.</p> 
+        </div>
+         
 
     </main>
 
+<!-- ***************************** CARDS BOOK *********************************** -->
 
     <h1>Book now !</h1>
 
