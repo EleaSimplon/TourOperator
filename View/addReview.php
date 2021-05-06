@@ -8,7 +8,7 @@
 
     $tourOp = new TourOperator(['id'=>intval($_POST['idTO'])]);
 
-    $newReview = new Review(['message'=>$_POST['message'], 'author'=>$_POST['author']]);
+    $newReview = new Review(['message'=>$_POST['message'], 'author'=>$_POST['author'], 'note'=>$_POST['note']]);
     $reviewManager->add($newReview, $tourOp);
 
     $reviews = $reviewManager->getList($tourOp);
@@ -22,6 +22,7 @@
         <div>
             <h3><?=$review->getAuthor()?> :</h3>
             <p><?=$review->getMessage()?></p>
+            <p><?=$review->getNote().'⭐'?></p>
         </div>
 
 <?php } ?>

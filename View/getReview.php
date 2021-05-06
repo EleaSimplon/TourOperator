@@ -19,6 +19,7 @@
         <div>
             <h3><?=$review->getAuthor()?> :</h3>
             <p><?=$review->getMessage()?></p>
+            <p><?=$review->getNote().'⭐'?></p>
         </div>
 
 <?php } ?>

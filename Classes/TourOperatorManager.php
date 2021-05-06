@@ -49,6 +49,9 @@ class TourOperatorManager {
 
     $q = $this->db->prepare('SELECT AVG (note) FROM reviews WHERE id_tour_operator =?');
     $q->execute([intval($tour_operator->getId())]);
+
+    $moyenne = $q->fetch(PDO::FETCH_BOTH);
+    return $moyenne[0];
     
   }
 
@@ -59,6 +62,10 @@ class TourOperatorManager {
     $q->bindValue(':grade', $this->getMoyenne($tourOperator));
     $q->bindValue(':id', ($tourOperator->getId()));
     $q->execute();
+
+    $tourOperator->hydrate([
+      'grade' => $this->getMoyenne($tourOperator)
+    ]);
     
   }
 

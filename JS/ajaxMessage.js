@@ -35,7 +35,7 @@ submitMsg.addEventListener('click',function (e){
     formData.append('idTO', idTO)
     formData.append('message', inputMessage.value)
     formData.append('author', inputAuthor.value)
-    formData.append('note', inputAuthor.value)
+    formData.append('note', inputNote.value)
 
 
 
@@ -49,6 +49,7 @@ submitMsg.addEventListener('click',function (e){
         commentMsg.innerHTML=data
         inputAuthor.value = ''
         inputMessage.value = ''
+        inputNote.value = ''
     })
 
 })
