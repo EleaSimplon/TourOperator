@@ -30,6 +30,10 @@
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
+                     <!-- PREMIUM -->
+                     <?php if ($to->isIsPremium()==1){?>
+                        <a target="_blank" href="<?= $to->getLink();}?>"><img border="0" alt="badg" src="/IMG/badge.png" width="100" height="100"></a>
+
                         <h5 class="card-title"><?=$to->getName()?></h5>
                         <p class="card-text"><?=$destination->getDescription()?></p>
                         <h4 class="card-text"><?=$destination->getPrice().' $'?></h4>

@@ -9,8 +9,13 @@
     $destination = new DestinationManager($pdo);
     $allDestinations = $destination->getListGroupByName();
 
+    $destinationList = $destination->getList();
+
     $tourOp = new TourOperatorManager($pdo);
     $allTourOp = $tourOp->getList();
+
+
+
 
     /* IF FORM 1 */
 
@@ -39,6 +44,29 @@
         $destination->add($newDestination, $operator);
     
     }
+
+    /* IF FORM 4 DELETE */
+
+    if (isset($_POST['deletedestination'])){
+        $newdestination = new Destination(['id'=>$_POST['deletedestination']]);
+        $destination->DeleteDestination($newdestination);     
+            
+    }
+            
+    if (isset($_POST['deleteto'])){
+        $operator = new TourOperator(['id'=>$_POST['deleteto']]);
+        $tourOp->DeleteTO($operator);
+                    
+    }
+
+    /* IF FORM 5 UPDATE */
+
+    if (isset($_POST['premium'])){
+        $premium = new TourOperator(['id'=>$_POST['PreTO'], 'is_premium'=>$_POST['premium']]);
+        $tourOp->UpdateTO($premium);
+                    
+                
+    }
     
 
 ?>
@@ -46,7 +74,8 @@
 <!-- FORM 1 CREATE TO-->
 <div class="container forms-admin">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 col-md-offset-4">
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="text-center">
@@ -60,12 +89,6 @@
                                     <input id="forgetAnswer" name="name" placeholder="TO Name" class="form-control"  type="text" required>
                                 </div>
                             </div>
-                            <!-- <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
-                                    <input id="forgetAnswer" placeholder="Grade" class="form-control"  type="number" name="grade" min="0" max="5" required>
-                                </div>
-                            </div> -->
                             <div class="form-group">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
@@ -89,7 +112,7 @@
         </div>
 
         <!-- FORM 2 CREATE DESTI -->
-        <div class="col-lg-4 col-md-6 col-sm-12 col-md-offset-4">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="text-center">
@@ -140,9 +163,12 @@
                 </div>
             </div>
         </div>
+    </div> <!-- END ROW 1 -->
 
-        <!-- FORM 3 CREATE ALL -->
-        <div class="col-lg-4 col-md-6 col-sm-12 col-md-offset-4">
+    <!-- FORM 3 CREATE ALL -->
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 col-md-offset-4">
+
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="text-center">
@@ -151,17 +177,17 @@
 
                         <form id="register-form3" role="form" action="Admin.php" method="post" class="form">
                             <div class="form-group">
-                                    <div class="input-group">
-                                        <select class="form-control" id="sel1" name="location">
-                                            <option selected="true" disabled="disabled">Choose a location</option>
-                                            <?php foreach ($allDestinations as $rowDestination) { ?>
+                                <div class="input-group">
+                                    <select class="form-control" id="sel1" name="location">
+                                        <option selected="true" disabled="disabled">Choose a location</option>
+                                        <?php foreach ($allDestinations as $rowDestination) { ?>
 
-                                                <option value="<?=$rowDestination->getLocation()?>"><?=$rowDestination->getLocation()?></option>
+                                            <option value="<?=$rowDestination->getLocation()?>"><?=$rowDestination->getLocation()?></option>
 
-                                            <?php } ?>
-                                        </select>
-                                    </div>
+                                        <?php } ?>
+                                    </select>
                                 </div>
+                            </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <select class="form-control" id="sel1" name="to2">
@@ -187,8 +213,104 @@
                 </div>
             </div>
         </div>
+    
+
+        <!-- FORM 4 DELETE -->
+        <div class="col-lg-6 col-md-12 col-sm-12 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center">
+                        <img src="/IMG/trip.png" border="0">
+                        <h2 class="text-center">Delete TO & his trip</h2>
+
+                        <form id="register-form3" role="form" action="Admin.php" method="post" class="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select name="deletedestination" class="form-control" id="sel1">
+                                        <option selected="true" disabled="disabled">Please choose a location</option>
+
+                                        <?php foreach ($destinationList as $rowDestination) { ?>
+
+                                            <option value="<?= $rowDestination->getId()?>"><?=$destination->getDestibyTo($rowDestination)->getName()?> : <?=$rowDestination->getLocation()?></option>
+
+                                        <?php } ?>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <select name="deleteto" class="form-control" id="sel1">
+                                        <option selected="true" disabled="disabled">Please choose a TO</option>
+                                        <?php foreach ($allTourOp as $rowTourop){ ?>
+                                            <option value="<?=$rowTourop->getId()?>"><?=$rowTourop->getName()?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget"type="submit">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- END ROW 2 -->
+
+    <div class="row">
+
+        <!-- FORM 5 UPDATE -->
+        <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <img src="/IMG/update.png" border="0">
+                            <h2 class="text-center">Update TO Premium</h2>
+
+                            <form id="register-form3" role="form" action="Admin.php" method="post" class="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <select name="PreTO" class="form-control" id="sel1">
+                                            <option selected="true" disabled="disabled">Please choose a TO</option>
+
+                                            <?php foreach ($allTourOp as $rowTourop){ ?>
+                                                <option value="<?=$rowTourop->getId()?>"><?=$rowTourop->getName()?><?=" ".$rowTourop->isIsPremium()?></option>
+                                            <?php } ?>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <select name="premium" class="form-control" id="sel1">
+                                            <option selected="true" disabled="disabled">Please choose a value</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input name="btnForget" class="btn btn-lg btn-primary btn-block btnForget" type="submit">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+
+</div> <!-- END CONTAINER -->
+
+
+<!-- ***************************** BACK TO TOP BTN *********************************** -->
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
 
 
 

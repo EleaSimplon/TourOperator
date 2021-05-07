@@ -9,5 +9,6 @@
     <script src="/JS/ajaxMessage.js"></script>
     <script src="/JS/parallax.js"></script>
     <script src="/JS/backToTopBtn.js"></script>
+    <script src="/JS/carousel.js"></script>
 </body>
 </html>

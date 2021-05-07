@@ -50,7 +50,7 @@ class TourOperatorManager {
     return $moyenne[0];
 }
 
-public function addGrade(TourOperator $tour_operator){
+  public function addGrade(TourOperator $tour_operator){
     $q = $this->db->prepare('UPDATE tour_operators SET grade = :grade WHERE id = :id');
 
     $q->bindValue(':grade', $this->getMoyenne($tour_operator));
@@ -60,6 +60,24 @@ public function addGrade(TourOperator $tour_operator){
     $tour_operator->hydrate([
         'grade'=>$this->getMoyenne($tour_operator)
     ]);
-}
+  }
+
+  /* METHODE POUR SUP UN TO */
+
+  public function DeleteTO(TourOperator $tour_operator){
+    $q= $this->db->prepare('DELETE  FROM tour_operators WHERE id= :id');
+    $q->bindValue(':id', $tour_operator->getId());
+    $q->execute();
+  }
+
+  /* METHODE POUR UPDATE UN TO PREMIUM OU PAS */
+
+  public function UpdateTO(TourOperator $tour_operator){
+    $q= $this->db->prepare('UPDATE tour_operators  SET is_premium=:is_premium WHERE id= :id');
+    $q->bindValue(':id', $tour_operator->getId());
+    $q->bindValue(':is_premium', $tour_operator->isIsPremium ());
+    $q->execute();
+  }
+
 
 }

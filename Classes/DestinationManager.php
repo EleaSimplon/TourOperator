@@ -95,8 +95,14 @@ class DestinationManager {
       return $destinations;
   }
 
-  /* AJOUTER INFO FORM SELECT */
 
+  /* METHODE POUR SUP UNE DESTI */
+
+  public function DeleteDestination(Destination $destination){
+    $q= $this->db->prepare('DELETE  FROM destinations WHERE id= :id');
+    $q->bindValue(':id', $destination->getId());
+    $q->execute();
+  }
   
 
 }
