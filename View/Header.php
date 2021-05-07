@@ -39,7 +39,7 @@
         <a class="nav-link" href="#sales">Sales</a>
       </li>
             <li class="nav-item">
-        <a class="nav-link" href="/View/Admin.php">Admin</a>
+        <a class="nav-link" href="/View/connexionAdmin.php">Admin</a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,10 +1,22 @@
 <?php
 
+    
+
     include '../Process/Autoload.php';
 
     require_once("../Process/Connexion.php");
 
+    /* ADMIN */
+
+    session_start();
+
+    if (empty($_SESSION['admin'])&& empty($_SESSION['password'])){
+        header('Location: /index.php');
+    };
+
     include 'Header.php';
+
+    
 
     $destination = new DestinationManager($pdo);
     $allDestinations = $destination->getListGroupByName();
@@ -260,7 +272,7 @@
 
     </div> <!-- END ROW 2 -->
 
-    <div class="row">
+    <div class="row d-flex justify-content-center">
 
         <!-- FORM 5 UPDATE -->
         <div class="col-lg-6 col-md-12 col-sm-12">
