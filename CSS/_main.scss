@@ -4,7 +4,6 @@
 @import 'navbar';
 @import 'card-index';
 @import 'cards-admin';
-@import 'parallax';
 @import 'poc';
 
 html {
@@ -24,7 +23,7 @@ h1 {
   padding: 1rem;
 }
 
-/* INDEX */
+/***************** INDEX **************/
 
 /* CARDS */
 
@@ -43,7 +42,17 @@ h1 {
   }
 }
 
-/* LIST TO */
+/* MAIN PAGE */
+
+main { 
+  position: relative; z-index: 1;
+  padding: 2em 1em 4em;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+
+/************ LIST TO *****************/
 
 /* CARDS */
 
@@ -54,7 +63,7 @@ h1 {
   text-align: center;
 }
 
-/* BACK TO TOP BTN */
+/**************** BACK TO TOP BTN *************/
 
 .back-to-top {
   position: fixed;
@@ -62,5 +71,3 @@ h1 {
   right: 25px;
   display: none;
 }
-
-

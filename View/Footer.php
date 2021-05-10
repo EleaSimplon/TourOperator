@@ -7,7 +7,6 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/JS/navbar.js"></script>
     <script src="/JS/ajaxMessage.js"></script>
-    <script src="/JS/parallax.js"></script>
     <script src="/JS/backToTopBtn.js"></script>
     <script src="/JS/carousel.js"></script>
 </body>
