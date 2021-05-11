@@ -1,9 +1,3 @@
-// Variables
-$dark-blue: #1E1B2D;
-$light-blue: #828092;
-$white: #fff;
-$black: #000;
-
 // clear-fix mixin
 @mixin cf {
   &::before,
@@ -44,9 +38,7 @@ $black: #000;
       margin: 0;
       padding: 0;
       list-style-type: none;
-      li {
-        display: inline-block;
-      }
+
       a {
         color: $white;
       }
@@ -157,3 +149,7 @@ $black: #000;
       }
     }
   }
+
+i .fas, .fa-comments {
+  pointer-events: none;
+}

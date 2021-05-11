@@ -5,12 +5,12 @@
 }
 
 h2{
-  color: #0a4870;
+  color: #000000;
   font-weight: 500;
 }
 
-.booking-card {
-  font-family: $font;
+.book {
+  background-color: blanchedalmond;
 }
 
 
@@ -38,7 +38,7 @@ ul{
   background-size: cover;
   
   text-align: center;
-  color: $blue;
+  color: black;
   
   transition: .3s;
   
@@ -101,7 +101,7 @@ ul{
     
     padding: 20px;
     
-    background: $grey2;
+    background: #fffcfc;
     
     transform: translateY(206px);
     
@@ -159,7 +159,7 @@ ul{
           margin-top: 20px;
           @include radius(10px);
 
-          background: white;
+          background: #ffedd8;
 
           font-weight: bold;
           font-size: 0.9em;
@@ -169,7 +169,7 @@ ul{
           }
 
           &.info{
-            color: $orange;
+            color: black;
 
             margin-right: 10px;
           }
@@ -211,9 +211,6 @@ ul{
   
   text-align: center;
   
-  a{
-    color: $blue2;
-  }
 }
 
 h1{

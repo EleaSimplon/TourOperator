@@ -4,7 +4,6 @@
 @import 'navbar';
 @import 'card-index';
 @import 'cards-admin';
-@import 'poc';
 @import 'header';
 @import 'card-list-to';
 
@@ -27,6 +26,23 @@ h1 {
 
 /***************** INDEX **************/
 
+/* ABOUT */
+
+main { 
+  position: relative; z-index: 1;
+  padding: 2em 1em 4em;
+  margin: 0 auto;
+}
+
+.about {
+  max-width: 31rem;
+  display: inline-block;
+
+  img{
+    width:60%;
+  }
+}
+
 /* CARDS */
 
 .card-index {
@@ -37,22 +53,11 @@ h1 {
   }
 }
 
-.about {
+/* POC SALES */
 
-  img{
-    width:60%;
-  }
+.pt-5 {
+  background-color: blanchedalmond;
 }
-
-/* MAIN PAGE */
-
-main { 
-  position: relative; z-index: 1;
-  padding: 2em 1em 4em;
-  max-width: 580px;
-  margin: 0 auto;
-}
-
 
 /************ LIST TO *****************/
 
@@ -72,4 +77,28 @@ main {
   bottom: 25px;
   right: 25px;
   display: none;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: blanchedalmond;
+}
+
+.copyright {
+  background-color: #fad8ae;
+}
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
 }

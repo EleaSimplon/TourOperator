@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
-/* ??????? */
-/* POC */
+/************ CARD INDEX **************/
+/*********** CARD LIST TO ***********/
 /* Underline Effect*/
+.navbar {
+  background-color: #fad8ae;
+}
+
 .nav-item {
   position: relative;
 }
@@ -48,12 +52,12 @@
 }
 
 h2 {
-  color: #0a4870;
+  color: #000000;
   font-weight: 500;
 }
 
-.booking-card {
-  font-family: "Sofia", sans-serif;
+.book {
+  background-color: blanchedalmond;
 }
 
 ul {
@@ -78,7 +82,7 @@ ul .booking-card {
   background-position: center;
   background-size: cover;
   text-align: center;
-  color: #0a4870;
+  color: black;
   transition: 0.3s;
 }
 ul .booking-card::before {
@@ -124,7 +128,7 @@ ul .booking-card .book-container .content .btn:hover {
 ul .booking-card .informations-container {
   flex: 1 0 auto;
   padding: 20px;
-  background: #f0f0f0;
+  background: #fffcfc;
   transform: translateY(206px);
   transition: 0.3s;
 }
@@ -169,7 +173,7 @@ ul .booking-card .informations-container .more-information .info-and-date-contai
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  background: white;
+  background: #ffedd8;
   font-weight: bold;
   font-size: 0.9em;
 }
@@ -177,7 +181,7 @@ ul .booking-card .informations-container .more-information .info-and-date-contai
   margin-bottom: 5px;
 }
 ul .booking-card .informations-container .more-information .info-and-date-container .box.info {
-  color: #ec992c;
+  color: black;
   margin-right: 10px;
 }
 ul .booking-card .informations-container .more-information .disclaimer {
@@ -226,9 +230,6 @@ ul .booking-card:hover .informations-container .more-information {
   border-radius: 10px;
   text-align: center;
 }
-.credits a {
-  color: #e3ebf1;
-}
 
 h1 {
   margin: 10px 20px;
@@ -237,6 +238,7 @@ h1 {
 /* ADMIN */
 /* FORMS */
 .forms-admin .panel-body {
+  margin-top: 4rem;
   padding: 15%;
   margin-bottom: 13rem;
   height: 44rem;
@@ -388,9 +390,6 @@ h1 {
 .card1 .menu-content::after {
   clear: both;
 }
-.card1 .menu-content li {
-  display: inline-block;
-}
 .card1 .menu-content a {
   color: #fff;
 }
@@ -485,6 +484,10 @@ h1 {
   color: white;
 }
 
+i .fas, .fa-comments {
+  pointer-events: none;
+}
+
 html {
   cursor: url(/IMG/laptop.png);
 }
@@ -503,6 +506,22 @@ h1 {
 }
 
 /***************** INDEX **************/
+/* ABOUT */
+main {
+  position: relative;
+  z-index: 1;
+  padding: 2em 1em 4em;
+  margin: 0 auto;
+}
+
+.about {
+  max-width: 31rem;
+  display: inline-block;
+}
+.about img {
+  width: 60%;
+}
+
 /* CARDS */
 .card-index {
   display: flex;
@@ -511,17 +530,9 @@ h1 {
   margin: 1rem;
 }
 
-.about img {
-  width: 60%;
-}
-
-/* MAIN PAGE */
-main {
-  position: relative;
-  z-index: 1;
-  padding: 2em 1em 4em;
-  max-width: 580px;
-  margin: 0 auto;
+/* POC SALES */
+.pt-5 {
+  background-color: blanchedalmond;
 }
 
 /************ LIST TO *****************/
@@ -539,6 +550,29 @@ main {
   bottom: 25px;
   right: 25px;
   display: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: blanchedalmond;
+}
+
+.copyright {
+  background-color: #fad8ae;
+}
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=main.css.map */

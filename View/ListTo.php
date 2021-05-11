@@ -71,33 +71,35 @@
         <!-- ************ DIV MODALE THAT GOES W/ THE BUTTON COMMENTS ************ -->
 
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Comments</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- AJAX POUR LES COMS DANS JS ET GETREVIEW -->
-            </div>
-            <div class="modal-footer">
-            <img src="/IMG/note.png" style="width:9rem">
-                <!-- <h5>Write your comment...</h5> -->
-                <form action="" method="">
-                <div class="labels">
-                    <label>* Name</label>
-                    <input id="input-author" type="text" name="author" placeholder="Pierre" required>
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Comments</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="labels">
-                    <label>* Comment</label>
-                    <input id="input-message" type="textarea" name="comment" placeholder="Your comment" required>
+                <div class="modal-body">
+                    <!-- AJAX POUR LES COMS DANS JS ET GETREVIEW -->
                 </div>
-                <div class="labels">
-                    <label>* Note</label>
-                    <input id="input-note" type="number" name="note" min="0" max="5" required>
+                <div class="modal-footer">
+                <img src="/IMG/note.png" style="width:9rem">
+                    <!-- <h5>Write your comment...</h5> -->
+                    <form action="" method="">
+                    <div class="labels">
+                        <label>* Name</label>
+                        <input id="input-author" type="text" name="author" placeholder="Pierre" required>
+                    </div>
+                    <div class="labels">
+                        <label>* Comment</label>
+                        <input id="input-message" type="textarea" name="comment" placeholder="Your comment" required>
+                    </div>
+                    <div class="labels">
+                        <label>* Note</label>
+                        <input id="input-note" type="number" name="note" min="0" max="5" required>
+                    </div>
+                    <button class="btn btn-dark btn-form-review" id='submit' type="button">Submit</button>
+                    </form>
                 </div>
-                <button class="btn btn-dark btn-form-review" id='submit' type="button">Submit</button>
-                </form>
+                </div>
             </div>
         </div>
    

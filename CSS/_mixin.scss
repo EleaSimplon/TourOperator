@@ -1,15 +1,14 @@
-/* ??????? */
-$font : 'Sofia', sans-serif;
+/************ CARD INDEX **************/
+
+
 $font-size:16px;
 $blue : #0a4870;
-$blue2 : #e3ebf1;
 $black: #000;
 $grey : #7d7d7d;
 $grey2 : #f0f0f0;
 $grey3 : #e8e7e7;
 $grey4 : #fdfdfd;
-$bluegrey : #49606e;
-$orange: #ec992c;
+$orange: #fa8e01;
 
 @mixin radius($val) {
   -webkit-border-radius: $val;
@@ -37,5 +36,9 @@ $orange: #ec992c;
     }
 }
 
-/* POC */
+/*********** CARD LIST TO ***********/
 
+$dark-blue: #1E1B2D;
+$light-blue: #828092;
+$white: #fff;
+$black: #000;
