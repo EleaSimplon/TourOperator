@@ -8,6 +8,6 @@
     <script src="/JS/navbar.js"></script>
     <script src="/JS/ajaxMessage.js"></script>
     <script src="/JS/backToTopBtn.js"></script>
-    <script src="/JS/carousel.js"></script>
+    <script src="/JS/header.js"></script>
 </body>
 </html>

@@ -76,13 +76,33 @@ class DestinationManager {
 
     return $destinationCollection;
   }
+  public function getOneBy($param)
+  {
+      if (is_int($param)) {
+
+        $q = $this->db->prepare('SELECT * FROM destinations WHERE id=?');
+          
+        
+        $q->execute([$param]);
+        $destination = $q->fetch(PDO::FETCH_ASSOC);
+        return new Destination($destination);
+      }else{
+        $q = $this->db->prepare('SELECT * FROM destinations WHERE location=?');
+          
+        
+        $q->execute([$param]);
+        $destination = $q->fetch(PDO::FETCH_ASSOC);
+        return new Destination($destination);
+      }
+
+  }
 
   /* METHODE POUR PAS AVOIR DE DOUBLON */
 
   public function getListGroupByName()
   {
 
-    $q = $this->db->prepare('SELECT location, img, description FROM destinations GROUP BY location, img, description');
+    $q = $this->db->prepare('SELECT location, img, description, price FROM destinations  GROUP BY location, img, description ORDER BY price ASC');
 
     $destinations = [];
 

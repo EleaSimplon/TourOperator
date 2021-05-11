@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="/CSS/main.css">
     <!-- FONT AWESOME LINK -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!----- ***** URL ICON LINK ******------>
     <link rel="icon" href="/IMG/planet.png"/>
     <title>ComparOperator</title>
 </head>
 <body>
+
+
 
 <nav id="anchor" class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="/index.php">ComparOperator 🌍</a>
@@ -38,6 +41,20 @@
             <li class="nav-item">
         <a class="nav-link" href="#sales">Sales</a>
       </li>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="/View/connexionAdmin.php">Admin</a>
+      </li>
     </ul>
   </div>
 </nav>
+
+<div class="hero">
+
+  <h1><span>Welcome to</span><br>ComparOperator</h1>
+
+  <div class="mouse">
+      <span></span>
+  </div>
+
+</div>

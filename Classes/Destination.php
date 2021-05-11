@@ -42,7 +42,11 @@ class Destination {
     }
 
     public function getImg (){
-        return $this->img;
+        if (isset($this->img)) {
+            return $this->img;
+        }else{
+            return null;
+        }
     }
 
     public function setImg ($img){
@@ -50,7 +54,11 @@ class Destination {
     }
 
     public function getDescription (){
-        return $this->description;
+        if (isset($this->description)) {
+            return $this->description;
+        }else{
+            return null;
+        }
     }
 
     public function setDescription ($description){

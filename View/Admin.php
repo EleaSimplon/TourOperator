@@ -51,7 +51,8 @@
 
     if (isset($_POST['price2'])){
 
-        $newDestination = new Destination(['location'=>$_POST['location'], 'id_tour_operator'=>$_POST['to2'], 'price'=>$_POST['price2']]);
+        $newDestination = $destination->getOneBy($_POST['location']);
+        $newDestination->setPrice($_POST['price2']);
         $operator = new TourOperator(['id'=>$_POST['to2']]);
         $destination->add($newDestination, $operator);
     
